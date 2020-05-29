@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  margin: 25px 0;
+  text-align: center;
+}
+.upload-box {
+  cursor: pointer;
+  height: 250px;
+  width: 250px;
+  border: 2px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  /* animation: mycolor 1s infinite ease-in-out alternate; */
+  /* background-color: red; */
+}
+.upload-box > .men {
+  position: absolute;
+  height: 25%;
+  margin:auto;
+  display: none;
+  color: #fff;
+  align-items: center;
+  width: 80%;
+  left: 50%;
+  justify-content: center;
+  font-size: 25px;
+  transform: translate(-50%);
+  background: #666;
+  opacity: .5;
+  animation: myopacity 1s infinite ease-in-out alternate;
+}
+.animate {
+  animation: mycolor 1s infinite ease-in-out alternate;
+}
+.animate > .men {
+  display: flex;
+}
+
+.upload-box > .icon {
+  width: 50%;
+  height: 50%;
+  margin: 15px auto;
+}
+.upload-box > .icon > img {
+  width: 100%;
+  height: 100%;
+}
+.upload-box > .desc {
+  text-align: center;
+  font-size: 15px;
+  overflow: auto;
+}
+.btn {
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.btn > div {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 15px;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+.btn > div:hover {
+  opacity: 1;
+}
+.upload {
+  background: skyblue;
+}
+.cancel {
+  background: #eee;
+}
+.hidden{
+  visibility: hidden;
+}
+.pogress{
+  width: 50%;
+  justify-self: flex-start;
+  align-content: flex-start;
+}
+.pogress>ul>li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.pogress>ul>li>div+div{
+  margin: 0 15px;
+  width: 30px;
+}
+.pogress>ul>li>div+div+div{
+  --progress:0%;
+  height: 10px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  flex: 1;
+  /* transition: all .25s; */
+  background: linear-gradient(to right,red calc(var(--progress)*1),#fff 3%);
+  /* background-size: 0%; */
+}
+@keyframes mycolor {
+  from {
+    border: 2px solid blue;
+  }
+  to {
+    border: 2px solid red;
+  }
+}
+@keyframes myopacity{
+  from{ opacity: .2;}
+  to{ opacity: .5;}
+}

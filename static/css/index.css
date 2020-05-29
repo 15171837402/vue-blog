@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li,
+dt {
+  list-style: none;
+}
+
+body {
+  background: #f1f1f1;
+  font-size: 16px;
+  min-width: 400px;
+}
+
+::-webkit-scrollbar {
+  height: auto;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: pink;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: yellow;
+  opacity: 0.5;
+}
+
+.user-info {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  padding-top: 50px;
+  height: 40vw;
+  min-height: 250px;
+  background: url(../img/T_3.png) no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.user-info .user-container .icon {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.user-info .user-container .icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.user-info .user-container .desc {
+  text-align: center;
+}
+
+.user-info .user-container .desc .name {
+  -webkit-animation: colorNg 1s infinite alternate;
+          animation: colorNg 1s infinite alternate;
+  cursor: pointer;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+  margin: 15px 0 5px 0;
+}
+
+.user-info .user-container .desc .name:hover {
+  color: pink;
+}
+
+.user-info .user-container .desc .join {
+  font-size: 12px;
+  color: #999;
+}
+
+.user-info .user-container .desc .join span {
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+  cursor: pointer;
+  color: #666;
+  vertical-align: middle;
+}
+
+.user-info .user-container .desc .join span:hover {
+  color: skyblue;
+}
+
+.user-info .user-container .desc .email {
+  font-size: 12px;
+}
+
+.user-info .user-container .desc .email img {
+  margin: 15px 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.user-info .user-container .desc .email img:hover {
+  -webkit-box-shadow: 1px 1px 10px 5px #eee;
+          box-shadow: 1px 1px 10px 5px #eee;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 15px;
+}
+
+.index .index-left {
+  width: 20%;
+  margin: 0 2%;
+  height: 500px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.index .index-left .left-top {
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.1);
+  font-size: "";
+  background-color: #fff;
+  overflow: hidden;
+  padding: 15px;
+  height: 150px;
+  -webkit-transition: height 0.25s;
+  transition: height 0.25s;
+}
+
+.index .index-left .left-top .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.index .index-left .left-top .title span:last-of-type {
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+  cursor: pointer;
+  color: #999;
+}
+
+.index .index-left .left-top .title span:last-of-type:hover {
+  color: #7ee5ff;
+}
+
+.index .index-left .left-top ul {
+  height: 100%;
+}
+
+.index .index-left .left-top ul li {
+  cursor: pointer;
+  font-size: 0.8em;
+  list-style: inside;
+  line-height: 28px;
+  overflow: unset;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.index .index-left .left-top:hover {
+  height: 250px;
+}
+
+.index .index-left .left-bottom {
+  margin-top: 15px;
+  height: 150px;
+  background: #fff;
+  padding: 15px;
+}
+
+.index .index-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 1%;
+  border: 1px solid #eee;
+  max-width: 760px;
+  min-width: 400px;
+}
+
+.index .index-right .head-title {
+  max-width: 80%;
+  margin: 0 auto;
+  color: #555;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.index .index-right .head-title:hover::after {
+  width: 100%;
+}
+
+.index .index-right .head-title::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  height: 5px;
+  margin-top: 5px;
+  width: 5%;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background: skyblue;
+}
+
+.index .index-right .right-top {
+  margin: 0 auto;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.index .index-right .right-top > div {
+  position: relative;
+  margin: 10px;
+  height: 200px;
+  background: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.index .index-right .right-top > div img {
+  width: 100%;
+  height: 100%;
+}
+
+.index .index-right .right-top > div .men {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 252, 99, 0.5);
+}
+
+.index .index-right .right-top > div:hover .men {
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.index .index-right .section {
+  margin: 0 auto;
+}
+
+.index .index-right .section .card-group {
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.index .index-right .section .card-group .card .card-img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+.index .index-right .section .card-group .card .card-img img {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: 100%;
+}
+
+.index .index-right .section .card-group .card .card-img img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.index .index-right .section .card-group .card .card-article {
+  padding: 15px;
+}
+
+.index .index-right .section .card-group .card .card-article .card-meta {
+  margin-bottom: 5px;
+}
+
+.index .index-right .section .card-group .card .card-article .card-meta .card-meta-left {
+  color: #7a7a7a;
+  font-size: 12px;
+}
+
+.index .index-right .section .card-group .card .card-article .card-title {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.index .index-right .section .card-group .card .card-article .card-content {
+  color: #4a4a4a;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.index .index-right .section .card-group .card .card-more {
+  margin-left: 12px;
+  font-size: 12px;
+  line-height: 48px;
+  padding: 5px 12px;
+  border-radius: 2px;
+  color: #070707;
+  background-color: #f5f5f5;
+  text-decoration: none;
+}
+
+.index .index-right .section .card-group .card .card-more:hover {
+  background: #e0e0e0;
+}
+
+@media screen and (max-width: 950px) {
+  .index .index-right .right-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 140px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .user-info {
+    padding-top: 0;
+  }
+  .user-info .icon {
+    height: 120px;
+    width: 120px;
+  }
+  .index {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .index .index-left {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .index .index-right {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .index .index-right .right-top {
+    margin: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 20px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
